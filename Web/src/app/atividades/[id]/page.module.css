@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.container{
+    width: calc(100vw - 30px);
+    height: calc(100vh - 20px);
+    background-color: rgba(255, 255, 255, 0.863);
+    position: relative;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0%  0.3%;
+}
+
+.img {
+    width: 40%;
+    max-width: 10%;
+    object-fit: contain;
+}
+
+.boxperfil_bground1{
+    width: 97%;
+    height: 92%;
+    background-color: #d1d2d300;
+    border-radius: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.boxperfil{
+    width: 97vw;
+    background-color: #d1d2d38c;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    align-items: center;
+    margin-top: 0.8%;
+}
+
+.boxperfil::-webkit-scrollbar{
+    display: none;
+}
+
+.ajustes{
+    background-color: #adbcc969;
+    border-radius: 38px;
+    height: 30%;
+    width: 95%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hello{
+    color: #74798fe1;
+    background-color: #C3CEDF;
+    text-align: center;
+    border-radius: 50px;
+    font-family: 'Inter';
+    font-size: 150%;
+    margin: 1%;
+    margin-top: 1%;
+    padding: 1% 5%;
+    font-weight: bold;
+}
+
+.information{
+    text-align:center;
+    width: 28%;
+    font-size: 150%;
+    font-style: normal;
+    text-indent: 2em;
+
+}
+
+.perfil{
+    text-align: center;
+
+}
+
+
+.configname{
+    font-size: 29px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.botooes{
+    display:inline-flex;
+}
+
+.botaohome{
+    height: auto;
+    background-color: #DEE0EC;
+    display:inline-flex;
+    margin: 2% 180px;
+    border: none;
+    width: 20vw;
+    height: 70%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 150%;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    
+}
+.botaohome:hover{
+    background-color: #aaabb1;
+    color: white;
+}
+
+.novaatividade{
+    border:solid 1px #777;
+    background-color: rgba(255, 255, 255, 0.473);
+    width: 94vw;
+    height: 90vh;
+    border-radius: 38px;
+    margin-bottom: 1%;
+}
+
+.botaoevento{
+    width: 40vw;
+    height: 6vh;
+    border-radius: 30px;
+    border: 3px solid rgba(0, 0, 0, 0.200);
+    color: rgba(0, 0, 0, 0.640);
+    font-weight: bold;
+    font-size: 26px;
+    top: 52%;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.botaoevento:hover{
+    background-color: rgba(0, 0, 0, 0.404);
+    color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+}
+/*em desenvolvimento*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radiocontainer {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+}
+
+/* Esconda o input de rádio */
+.radiocontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Estilo do texto quando o rádio é selecionado */
+.radiocontainer input:checked ~ .checkmark {
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+.radiocontainer input:checked ~ .checkmark::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #1d0241;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Crie um pseudo-elemento antes do texto */
+.radiocontainer .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.radiocontainer .checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+}

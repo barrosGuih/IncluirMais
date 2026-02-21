@@ -1,0 +1,183 @@
+
+.container{
+    width: calc(100vw - 30px);
+    height: calc(100vh - 20px);
+    background-color: rgba(234, 231, 231, 0.915);
+    position: relative;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0%  0.3%;
+}
+
+.containerinfo{
+    width: calc(100vw - 30px);
+    height: calc(100vh - 20px);
+    background-color: rgba(234, 231, 231, 0.915);
+    position: relative;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0%  0.3%;
+    font-size: 250%;
+}
+
+ 
+.boxperfil_bground1{
+    width: 97%;
+    height: 96%;
+    background-color: rgb(255, 250, 250);
+    border-radius: 38px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.perfilaluno{
+    width: 88vw;
+    height: 30vh;
+    background-color: #F3F3F3;
+    border-radius: 38px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    align-items: center;
+    
+}
+
+.perfilaluno2{
+    width: 44vw;
+    height: 30vh;
+    background-color: #E2E2E2;
+    border-radius: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    margin-top: 1%;
+    text-align: justify;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    
+}
+
+.perfilaluno3{
+    width: 44vw;
+    height: 30vh;
+    background-color: #f3f3f300;
+    border: none;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+
+.name{
+    text-align: center;
+    font-size: 40px; 
+}
+
+.name1{
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.botaoadicionar{
+    width: 34vw;
+    height: 7vh;
+    margin: 0 auto;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.botaoadicionar:hover{
+    background-color: rgba(11, 75, 170, 0.89);
+    color: white;
+}
+
+.conteudo{
+    display: inline-flex;
+    margin-left: 20%;
+    padding-top: 2%;
+}
+
+.descricao{
+    width: 40vw;
+    height: 30vh;
+    background-color: #eb0000;
+}
+
+.containerperfil{
+    display: inline-flex;
+    grid-column: auto;
+    margin: 8px 0;
+    flex-wrap: wrap;
+    
+}
+
+.detalhes{
+    font-size: 28px;
+}
+
+.funcaoaluno{
+   width: 30vw;
+   height: 8vh;
+   border-radius: 25px;
+   margin: 1.5%;
+   background-color: #E2D3BC;
+   font-size: 22px;
+   font-weight: bold;
+   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+   border: none;
+   cursor: pointer;
+}
+.funcaoaluno:hover{
+    border: 1px solid black;
+}
+
+  .estilodadiv {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    margin-top: 10px;
+  }
+  
+  .bodyy{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgb(0,178,255);
+    background: linear-gradient(180deg, rgba(0,178,255,1) 0%, rgba(131,72,255,1) 100%);
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border-radius: 38px;
+    font-family: 'DM Sans';
+}
+
+.fotoperfil{
+    width: 10%;
+    height: 40vh;
+    position: relative;
+    bottom: 65%;
+    right: 35%;
+    border-radius: 100%;
+}
