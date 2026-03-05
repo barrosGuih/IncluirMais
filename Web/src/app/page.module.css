@@ -1,5 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
 .container {
+    width: 95vw;
+    height: 95vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px); /* Efeito de vidro moderno */
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out; /* Animação ao entrar */
 }
 
+.boxperfil_bground1 {
+    width: 96%;
+    height: 94%;
+    background-color: rgba(128, 128, 128, 0.08);
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.boxperfil {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding-bottom: 2rem;
+}
+
+.ajustes {
+    background-color: #9AC5DF;
+    border-radius: 30px;
+    width: 92%;
+    min-height: 200px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.ajustes:hover {
+    transform: scale(1.01); /* Micro-interação */
+}
+
+.hello {
+    background-color: #ffffff;
+    color: #333;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-family: var(--font-inter);
+    font-weight: 800;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 1rem;
+}
+
+.botaohome {
+    background-color: #DEE0EC;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 0px #b5b7c3; /* Efeito de botão 3D sutil */
+}
+
+.botaohome:hover {
+    background-color: #cfd1e0;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0px #b5b7c3;
+}
+
+.botaohome:active {
+    transform: translateY(0px);
+    box-shadow: 0 0px 0px #b5b7c3;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade Inteligente */
+@media (max-width: 768px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0; /* Em celulares, telas cheias costumam ser melhores */
+    }
+    
+    .hello {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    .botooes {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+}

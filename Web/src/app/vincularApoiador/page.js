@@ -1,47 +1,65 @@
 import Style from './page.module.css';
-import Perfil from './imgs/profile1.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import  db  from '@/lib/db';
+import db from '@/lib/db';
 
-export default async ({ params }) => {
+export default async function ApoiadoresPage() {
   const alunos = await db.query("select * from apoiador");
 
   return (
-    <div className={Style.container}>
-      <div className={Style.boxperfil_bground1}>
-        <div className={Style.boxperfil}>
+    <div className={Style.mainContainer}>
+      <div className={Style.glassWrapper}>
+        <div className={Style.contentCard}>
+          
+          <div className={Style.layoutGrid}>
+            
+            {/* COLUNA DA ESQUERDA: LISTA */}
+            <section className={Style.listSection}>
+              <header className={Style.listHeader}>
+                <h1>Apoiadores Cadastrados</h1>
+                <p>{alunos.rows.length} apoiadores encontrados</p>
+              </header>
 
-        {/*tupla*/}
-          <div className={Style.tupla1}>
-            {alunos.rows.map(a => 
-           // <Link  href={"/perfilApoiador/" + a.id} className={Style.tuplas}> 
-            <div className={Style.tupla}>
-                  <div className={Style.divdotexto}>
-                    <div className={Style.tamanhotexto}>
-                    <h1 className={Style.nomee}>{a.nome}</h1> 
-                    </div>
-                    <h3 className={Style.info}>data nasc: {a.data_nasc}ㅤㅤㅤTurma: {a.turma}</h3> 
-                    
-                      <div>
-                        
+              <div className={Style.scrollArea}>
+                {alunos.rows.map((a, index) => (
+                  <Link 
+                    key={a.id} 
+                    href={`/perfilApoiador/${a.id}`} 
+                    className={Style.cardLink}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className={Style.studentCard}>
+                      <div className={Style.cardContent}>
+                        <h2 className={Style.studentName}>{a.nome}</h2>
+                        <div className={Style.studentDetails}>
+                          <span>📅 {a.data_nasc}</span>
+                          <span>🎓 Turma: {a.turma}</span>
+                        </div>
                       </div>
-                        
-                  </div>    
+                      <div className={Style.cardArrow}>➔</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+
+            {/* COLUNA DA DIREITA: AÇÕES (SIDEBAR) */}
+            <aside className={Style.actionSidebar}>
+              <div className={Style.stickyButtons}>
+                <Link href='/incluirapoiador' className={Style.btnPrimary}>
+                  <span>＋</span> Incluir Novo Apoiador
+                </Link>
+                <Link href='/homeInicial' className={Style.btnSecondary}>
+                  <span>🏠</span> Voltar ao Início
+                </Link>
+                
+                <div className={Style.helpBox}>
+                  <p>Clique em um apoiador para ver detalhes, relatórios e agenda.</p>
                 </div>
-            )}
-          </div>
-        {/*tupla*/}
+              </div>
+            </aside>
 
-          <div className={Style.botoessecun}>
-            <Link href={'./incluirapoiador'}><button className={Style.butterc}>Incluir novo apoiador</button></Link>
-            <Link href={'./homeInicial'}><button className={Style.butterc}>Voltar ao inicio</button></Link>
-
-          
           </div>
-          
-        
-          
         </div>
       </div>
     </div>

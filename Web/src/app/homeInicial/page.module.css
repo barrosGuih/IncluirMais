@@ -1,341 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-.container {
-    width: calc(100vw - 30px);
-    height: calc(100vh - 20px);
-    background-color: rgba(255, 255, 255, 0.842);
-    position: relative;
-    border-radius: 38px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0.3%;
-}
-
-.img {
-    width: 40%;
-    height: 100%;
-    max-width: 10%;
-    max-height: 40%;
-    object-fit: contain;
-}
-
-.editar{
-    width: 40%;
-    height: 100%;
-    max-width: 10%;
-    max-height: 40%;
-    object-fit: contain;
-
-}
-
-.boxperfil_bground1 {
-    width: 97%;
-    height: 96%;
-    background-color: rgba(128, 128, 128, 0.171);
-    border-radius: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.boxperfil {
-    width: 97%;
-    height: 96%;
-    background-color: #ffffffe0;
-    border-radius: 38px;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    align-items: center;
-}
-
-.boxperfil::-webkit-scrollbar {
-    display: none;
-}
-
-.ajustes {
-    background-color: #9AC5DF;
-    border-radius: 38px;
-    height: 30%;
-    width: 95%;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hello {
-    color: black;
-    background-color: #ffffff;
-    text-align: center;
-    border-radius: 50px;
-    font-family: 'Inter';
-    font-size: 150%;
-    margin: 0;
-    margin-top: 1%;
-    padding: 1% 5%;
-    font-weight: bold;
-    width: 30%;
-    height: 9%;
-    max-width: 30%;
-    max-height: 10%;
-}
-
-.information {
-    text-align: center;
-    width: 37%;
-    max-width: 90%;
-    font-size: 150%;
-    font-style: normal;
-    text-indent: 2em;
-    margin-bottom: 10%;
-}
-
-.perfil {
-    text-align: center;
-}
-
-.configname {
-    font-size: 29px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.botooes {
-    display: inline-flex;
-    justify-content: center;
-    gap: 40%;
-    
-    
-}
-
-.escopo{
-  display: inline-flex;
-  justify-content: center;
-  gap: 10%;
-}
-
-.logo{
-  width: 20vw;
-  height: 20vh;
-}
-
-.botaohome {
-  background-color: rgba(84, 110, 126, 0.151);
-  display: inline-flex; 
-  border: none;
-  width: 20vw;
-  height: 7vh;
-  border-radius: 12px;
-  font-size: 120%;
-  font-weight: bold;
-  cursor: pointer;
-  align-items: center; 
-  text-decoration: none;
-  gap: 8%;
-  box-shadow: 0px 2px 0px 0px rgba(54, 54, 54, 0.555);
-}
-
-.botaohome:hover {
-    background-color: #aaabb1;
-}
-
-/* Responsividade para dispositivos menores que 1366px (notebooks e desktops menores) */
-@media (max-width: 1366px) {
-  .hello {
-    font-size: 1.3rem;
-  }
-
-  .configname {
-    font-size: 1.6rem;
-  }
-
-  .information {
-    font-size: 1.1rem;
-    margin-bottom: 8%;
-  }
-
-  .botaohome {
-    font-size: 1.2rem;
-    width: 85%;
-  }
-
-  .botaohome1 {
-    font-size: 1.2rem;
-    width: 85%;
-  }
-}
-
-/* Responsividade para dispositivos menores que 1366px (notebooks e desktops menores) */
-@media (max-width: 1600px) {
-  .hello {
-    font-size: 1.3rem;
-  }
-
-  .configname {
-    font-size: 1.6rem;
-  }
-
-  .information {
-    font-size: 1.1rem;
-    margin-bottom: 8%;
-  }
-
-  .botaohome {
-    font-size: 1.2rem;
-    height: auto;
-    background-color: #DEE0EC;
-    display: inline-flex;
-    border: none;
-    width: 20vw;
-    text-align: center;
-    justify-content: center;
-    border-radius: 12px;
-    font-size: 125%;
-    font-weight: bold;
-    cursor: pointer;
-    align-items: center;
-  }
-
-  .botaohome1 {
-    font-size: 1.2rem;
-    height: auto;
-    background-color: #DEE0EC;
-    display: inline-flex;
-    border: none;
-    width: 20vw;
-    text-align: center;
-    justify-content: center;
-    border-radius: 12px;
-    font-size: 125%;
-    font-weight: bold;
-    cursor: pointer;
-    align-items: center;
-  }
-}
-
-/* Responsividade para dispositivos menores que 1200px (laptops e desktops menores) */
-@media (max-width: 1200px) {
-  .hello {
-    font-size: 1.4rem;
-  }
-
-  .configname {
-    font-size: 1.8rem;
-  }
-
-  .information {
-    font-size: 1.2rem;
-    margin-bottom: 8%;
-  }
-
-  .botaohome {
-    font-size: 1.3rem;
-    width: 90%;
-  }
-
-  .botaohome1 {
-    font-size: 1.3rem;
-    width: 90%;
-  }
-}
-
-/* Responsividade para dispositivos menores que 768px (tablets e smartphones) */
-@media (max-width: 768px) {
-  .container {
+.mainContainer {
     width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 10px;
-  }
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-  .img {
+/* Efeito de Vidro Externo */
+.glassWrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 38px;
+    padding: 15px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    display: flex;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Card Branco Interno */
+.contentCard {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Esconder scrollbar mas manter funcionalidade */
+.contentCard::-webkit-scrollbar { display: none; }
+
+/* Header Azul */
+.headerHero {
+    background: #9AC5DF;
+    width: 96%;
+    margin: 15px auto;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.profileCircle {
     width: 100px;
-    height: auto;
-  }
-
-  .boxperfil_bground1 {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .boxperfil {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-  }
-
-  .ajustes {
-    width: 100%;
-    height: auto;
-    margin: 10px 0;
-  }
-
-  .hello {
-    font-size: 1.2rem;
-    width: 90%;
-    padding: 10px 5%;
-  }
-
-  .configname {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .information {
-    font-size: 1rem;
-    width: 90%;
-    margin-bottom: 10%;
-  }
-
-  .botooes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .botaohome {
-    width: 80%;
-    margin: 10px 0;
-    font-size: 1.2rem;
-  }
-
-  .botaohome1 {
-    width: 80%;
-    margin: 10px 0;
-    font-size: 1.2rem;
-  }
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Ajuste adicional para dispositivos menores que 480px (smartphones) */
-@media (max-width: 480px) {
-  .hello {
-    font-size: 1rem;
-  }
+.profileImg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-  .configname {
-    font-size: 1.2rem;
-  }
+.welcomeText {
+    background: white;
+    padding: 10px 35px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
 
-  .information {
-    font-size: 0.9rem;
-    text-indent: 1em;
-    margin-bottom: 5%;
-  }
+.welcomeText span { color: #8348FF; font-weight: 800; }
 
-  .botaohome {
-    font-size: 1rem;
-    width: 90%;
-  }
+/* Seção Meio (Logo e Texto) */
+.mainSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    gap: 30px;
+    flex-grow: 1;
+}
 
-  .botaohome1 {
-    font-size: 1rem;
-    width: 90%;
-  }
+.logoImg {
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.05));
+    animation: float 4s ease-in-out infinite;
+}
+
+.infoWrapper {
+    max-width: 500px;
+}
+
+.infoWrapper h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.infoWrapper p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.callToAction {
+    font-weight: 600;
+    color: #00B2FF;
+}
+
+/* Botões */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.btnPrimary {
+    text-decoration: none;
+    background-color: #DEE0EC;
+    color: #444;
+    padding: 15px 35px;
+    border-radius: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-bottom: 4px solid #bfc1d1;
+}
+
+.btnPrimary:hover {
+    transform: translateY(-5px);
+    background-color: #d8dae9;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btnPrimary:active {
+    transform: translateY(0);
+    border-bottom-width: 0;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* --- RESPONSIVIDADE TOTAL --- */
+@media (max-width: 1024px) {
+    .mainSection { flex-direction: column; text-align: center; }
+    .infoWrapper h2 { font-size: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .glassWrapper { height: auto; border-radius: 20px; }
+    .actions { flex-direction: column; width: 100%; align-items: center; }
+    .btnPrimary { width: 90%; justify-content: center; }
+    .welcomeText { font-size: 1.2rem; width: 100%; }
+    .logoImg { max-width: 180px; }
 }
