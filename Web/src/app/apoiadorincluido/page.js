@@ -11,7 +11,7 @@ export default function ApoiadorIncluido() {
       <div className={Style.boxperfil_bground1}>
         <div className={Style.conteudo}>
           <Link href={"./homeInicial"}><div className={Style.logocontainer}>
-            <Image className={Style.Logo} src={Incluir}/>
+            <Image className={Style.Logo} alt='logo' src={Incluir}/>
           </div></Link>
           <h1 className={Style.texto1}>Aluno Apoiador incluido com sucesso!</h1>
           <Image className={Style.ok} src={Ok}></Image>

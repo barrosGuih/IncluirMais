@@ -1,13 +1,15 @@
 'use client'
 import Style from './page.module.css';
 import Image from 'next/image';
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import ApoiadorForm from '../../components/incluirapoiado/apoiadorform'
-import Incluir from './imgs/incluir.png'
+import { useRouter } from 'next/navigation';
+import ApoiadorForm from '../../components/incluirapoiado/apoiadorform';
+import Voltar from '../apoiados/imgs/voltar.png';
 
 export default function HomeInicial() {
   const [alunos, setAlunos] = useState([])
+  const router = useRouter();
 
   useEffect(() => {
     fetchAlunos()
@@ -17,35 +19,49 @@ export default function HomeInicial() {
     const response = await fetch('/api/apoiador')
     if(response.ok){
       const data = await response.json()
-    setAlunos(data)
-    } else {
-      console.error('erro seu trouxa a buscar os alunos', response.status, response.statusText);
+      setAlunos(data)
     }
-    
   }
 
   const addAluno = async (aluno) => {
     const response = await fetch('/api/apoiador', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(aluno),
     })
+    
     if (response.ok) {
-      fetchAlunos() 
-    }else { console.error('Falha ao adicionar aluno:', await response.text()); }
+       router.push('/apoiadorincluido');
+    } else {
+       console.error('Falha ao adicionar');
+    }
   }
 
   return (
-    <div className={Style.container}>
-      <div className={Style.boxperfil_bground1}>
-        <div className={Style.conteudo}>
-          <Link href={"./homeInicial"}><div className={Style.logocontainer}>
-            <Image className={Style.Logo} src={Incluir}/>
-          </div></Link>
-          <h1 className={Style.texto1}>Incluir Aluno Apoiador</h1>
-          <ApoiadorForm onAddAluno={addAluno}></ApoiadorForm>
+    <div className={Style.mainContainer}>
+      <div className={Style.glassWrapper}>
+        <div className={Style.contentCard}>
+          
+          {/* HEADER PADRONIZADO */}
+          <div className={Style.topBar}>
+            <button onClick={() => router.back()} className={Style.btnVoltar}>
+              <Image src={Voltar} alt="Voltar" width={30} height={30} />
+            </button>
+            <h1 className={Style.pageTitle}>Incluir Aluno Apoiador</h1>
+          </div>
+
+          {/* CONTEÚDO SCROLLABLE */}
+          <div className={Style.scrollContent}>
+            <div className={Style.formWrapper}>
+              <div className={Style.headerIllustration}>
+                <div className={Style.iconCircle}>🤝</div>
+                <p>Preencha os dados abaixo para cadastrar um novo apoiador no projeto.</p>
+              </div>
+              
+              <ApoiadorForm onAddAluno={addAluno} />
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
